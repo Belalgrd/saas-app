@@ -2,7 +2,11 @@
   "mcpServers": {
     "postgresql-server": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-postgres", "--connection-string", "${DATABASE_URL}"]
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/mydb"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./src", "./tests", "./docs"]
     }
   }
 }
